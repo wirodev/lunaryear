@@ -1,174 +1,85 @@
+
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 40px;
-    background-image: url("../img/background.webp");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0; 
-    background: url("../img/background.webp") center center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  
-  
-  h1 {
-    color: #333;
-  }
-  
-  input, button {
-    padding: 10px;
-    font-size: 16px;
-    margin: 10px;
-  }
-  
-  #result {
-    margin-top: 30px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    display: inline-block;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  #result img {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 15px;
-  }
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0; 
+  background: url("../img/background.webp") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-  /* 1) OPTIONAL: set a background for the entire page */
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 40px;
-    background-image: url("../img/background.webp");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0; 
-    background: url("../img/background.webp") center center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  
-
-/* 2) The container that holds the decorative form */
-.fancy-form-container {
-  /* Center it on the page */
-  width: 400px;         /* approximate width, adjust to taste */
-  margin: 50px auto;    /* center horizontally, plus some space from top */
-
-  /* Use the decorative form image as a background */
+.form-container {
+  margin: 40px auto;
+  width: 80vw;           
+  max-width: 600px;      
+  aspect-ratio: 1 / 1;   
   background: url("../img/form.png") no-repeat center center;
   background-size: contain; 
-  /* 
-    'contain' ensures the entire form image is visible, 
-    but if your image is more wide than tall, or vice versa, 
-    you might prefer 'cover'. 
-    That said, 'contain' usually works better for matching lines. 
-  */
-
-  /* We need a fixed height to keep the container aspect ratio. 
-     If your fancy-form.webp is, for example, 1000px wide x 1000px tall,
-     you could do a 1:1 ratio: 400px wide x 400px tall. 
-     If the image is more rectangular, match that ratio. */
-  height: 400px;
-  position: relative; /* So that child elements can be absolutely positioned inside */
+  position: relative;
 }
 
-/* 3) Title text inside the form */
-.form-title {
+.form-content {
   position: absolute;
-  top: 40px;  /* adjust so it lines up with the fancy “scroll” heading */
-  left: 0;    
-  width: 100%; /* so it’s centered horizontally */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;   
   text-align: center;
-  font-size: 24px;
-  color: #333; /* or any color that looks good on your image */
-  margin: 0;
-  padding: 0;
 }
 
-/* 4) Label for the birth year */
-.year-label {
-  position: absolute;
-  top: 110px;  /* adjust to place it on or near the next “line” in the scroll */
-  left: 25%;
-  width: 50%;  /* or whatever fits nicely */
-  text-align: center;
+.birthyear-input {
+  display: block;
+  margin: 0 auto 10px;
+  width: 40%;
+  padding: 10px;
   font-size: 16px;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-/* 5) The input field for birth year */
-#birthYear {
-  position: absolute;
-  top: 140px;  /* place it in the next line area */
-  left: 28%; 
-  width: 45%;  /* or smaller if you want it to fit inside a line */
-  font-size: 16px;
-  padding: 5px;
-  border: 1px solid #ccc;
+  font-family: "Georgia", serif;
+  background: linear-gradient(#f9f4e6, #f2e9d0);
+  border: 2px solid #d2b48c;    
   border-radius: 4px;
-  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
 }
 
-/* 6) The “submit” button */
-#submitBtn {
-  position: absolute;
-  top: 260px; /* position it over the green “button” area in your image */
-  left: 35%; 
-  width: 30%; /* adjust to match the width of that green button area */
-  height: 40px; /* maybe match the height of that green button in the image */
-  background-color: transparent; 
-  /* 
-    Because the image already has a green button design, 
-    you might want to keep the button background transparent 
-    so it doesn’t cover the fancy design. 
-  */
-  border: none; 
-  cursor: pointer;
+.submit-button {
+  display: inline-block;
+  padding: 10px 20px;
   font-size: 16px;
-  color: #fff;  /* text color if you want to overlay text on top of the green area */
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* a little more readable if text is light */
+  cursor: pointer;
+  background-color: #0b3d02;
+  color: #FFD700;          
+  border: 2px solid #194d08;
+  border-radius: 4px;
+  font-family: "Georgia", serif; 
 }
 
-/* 
-   7) Make it responsive with a media query. 
-   For smaller screens, you can scale down the container further. 
-*/
-@media (max-width: 500px) {
-  .fancy-form-container {
-    width: 300px;
-    height: 300px; /* keep the same ratio so the lines match up */
-  }
+.frame-container {
+  margin: 40px auto;
+  width: 80vw;
+  max-width: 600px;  
+  aspect-ratio: 1 / 1;
+  position: relative;
+}
 
-  .form-title {
-    top: 30px; 
-    font-size: 20px;
-  }
-  .year-label {
-    top: 80px; 
-    font-size: 14px;
-  }
-  #birthYear {
-    top: 110px; 
-    font-size: 14px;
-  }
-  #submitBtn {
-    top: 200px; 
-    height: 35px;
-    font-size: 14px;
-  }
+.zodiac-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+
+.frame-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 2;
 }

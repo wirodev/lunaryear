@@ -10,17 +10,31 @@
 
   <!-- 1) Decorative Form Container -->
   <div class="form-container">
-    <!-- This inner div holds the actual form elements, centered over form.png -->
     <div class="form-content">
-      <input type="date" id="birthdate" />
-      <button id="submitBtn">Submit</button>
+      <input 
+        type="number" 
+        id="birthyear" 
+        placeholder="e.g. 1990" 
+        class="birthyear-input"
+      />
+      <button id="submitBtn" class="submit-button">Submit</button>
     </div>
   </div>
 
-  <!-- 2) Decorative Frame Container (for the resulting zodiac image) -->
+  <!-- 2) Frame Container -->
   <div class="frame-container">
-    <!-- The zodiac image is placed (and centered) inside the frame.png background -->
-    <img id="zodiacImage" alt="Zodiac" />
+    <!-- Show 'girl.webp' by default -->
+    <img 
+      id="zodiacImage" 
+      class="zodiac-image" 
+      src="img/girl.webp" 
+      alt="Zodiac"
+    />
+    <img 
+      src="img/frame.png" 
+      class="frame-foreground" 
+      alt="Decorative Frame"
+    />
   </div>
 
   <script src="js/main.js"></script>
